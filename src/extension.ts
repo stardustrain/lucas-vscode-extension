@@ -31,7 +31,7 @@ export function activate(context: vscode.ExtensionContext) {
 					'  ',
 					'};',
 					'',
-					`export const ${functionName}: ({}: ${typeName}) => {`,
+					`export const ${functionName} = ({}: ${typeName}) => {`,
 					'',
 					'};'
 				].join('\n');
