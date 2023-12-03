@@ -19,6 +19,10 @@
       {
         "command": "lucasHelper.makeFunction",
         "title": "lucas: Make arrow function"
+      },
+      {
+        "command": "lucasHelper.addNewTsFile",
+        "title": "lucas: Add a new file"
       }
     ]
   },
