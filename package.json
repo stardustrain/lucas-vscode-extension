@@ -37,7 +37,7 @@
     "compile": "tsc -p ./",
     "watch": "npm run build -- --watch",
     "lint": "eslint src --ext ts",
-    "test": "vitest",
+    "test": "vitest --passWithNoTests",
     "test:watch": "vitest --watch"
   },
   "devDependencies": {
