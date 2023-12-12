@@ -13,7 +13,7 @@
     "type": "git",
     "url": "test"
   },
-  "publisher": "LucasHan",
+  "publisher": "Lucashan",
   "main": "./out/extension.js",
   "contributes": {
     "commands": [
