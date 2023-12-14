@@ -2,7 +2,7 @@
   "name": "lucas-helper",
   "displayName": "LucasHelper",
   "description": "",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "engines": {
     "vscode": "^1.83.0"
   },

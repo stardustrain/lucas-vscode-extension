@@ -45,6 +45,6 @@ export class FileMeta {
 
   private getExtname() {
     let ext = extname(this.fileName);
-    return ALLOWED_EXTNAMES.includes(ext) ? '.ts' : ext;
+    return ALLOWED_EXTNAMES.includes(ext) ? ext : '.ts';
   }
 }
