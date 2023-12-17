@@ -29,31 +29,45 @@
   },
   "icon": "assets/icon.png",
   "scripts": {
+    "prepare": "husky install",
     "package": "vsce package",
     "publish": "vsce publish",
     "vscode:prepublish": "npm run compile",
     "build": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --target=es2020 --format=cjs --platform=node",
     "compile": "tsc -p ./",
-    "watch": "tsc -watch -p ./",
-    "pretest": "npm run compile && npm run lint",
+    "watch": "npm run build -- --watch",
     "lint": "eslint src --ext ts",
-    "test": "node ./out/test/runTest.js"
+    "test": "vitest --passWithNoTests",
+    "test:watch": "vitest --watch"
   },
   "devDependencies": {
-    "@types/mocha": "^10.0.2",
+    "@commitlint/cli": "^18.4.3",
+    "@commitlint/config-conventional": "^18.4.3",
     "@types/node": "18.x",
     "@types/vscode": "^1.83.0",
     "@typescript-eslint/eslint-plugin": "^6.7.3",
     "@typescript-eslint/parser": "^6.7.3",
+    "@vitest/coverage-v8": "^1.0.4",
     "@vscode/test-electron": "^2.3.4",
     "@vscode/vsce": "^2.21.1",
     "esbuild": "^0.19.4",
     "eslint": "^8.50.0",
     "glob": "^10.3.3",
-    "mocha": "^10.2.0",
-    "typescript": "^5.2.2"
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.0.7",
+    "vitest": "^1.0.4",
+    "vue-tsc": "^1.8.25"
   },
   "dependencies": {
     "change-case-all": "^1.0.15"
+  },
+  "lint-staged": {
+    "*.{js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
