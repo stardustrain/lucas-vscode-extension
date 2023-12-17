@@ -6,7 +6,6 @@
 		"lib": [
 			"ES2020"
 		],
-		"types": ["vitest/globals"],
 		"sourceMap": true,
 		"strict": true   /* enable all strict type-checking options */
 		/* Additional Checks */
